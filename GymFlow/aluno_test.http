@@ -1,0 +1,103 @@
+### 1️⃣ Cadastrar um aluno (POST)
+POST http://localhost:8080/alunos
+Content-Type: application/json
+
+{
+  "cpf": "12345678900",
+  "nome": "Caio Santana"
+}
+
+###
+
+### 2️⃣ Cadastrar outro aluno (POST)
+POST http://localhost:8080/alunos
+Content-Type: application/json
+
+{
+  "cpf": "98765432100",
+  "nome": "Maria Oliveira"
+}
+
+###
+
+### 3️⃣ Listar todos os alunos (GET)
+GET http://localhost:8080/alunos
+
+
+### 4️⃣ Cadastrar um administrador (POST)
+POST http://localhost:8080/administradores
+Content-Type: application/json
+
+{
+  "cpf": "11122233344",
+  "nome": "Admin Teste"
+}
+
+### 5️⃣ Cadastrar outro administrador (POST)
+POST http://localhost:8080/administradores
+Content-Type: application/json
+
+{
+  "cpf": "55566677788",
+  "nome": "Admin Dois"
+}
+
+### 6️⃣ Listar todos os administradores (GET)
+GET http://localhost:8080/administradores
+
+
+### Criar uma nova intenção de presença
+POST http://localhost:8080/intencoes
+Content-Type: application/json
+
+{
+  
+  "cpf": "12345678900",
+  "dataHora": "2025-09-10T10:30:00"
+
+
+}
+
+
+### Criar uma nova intenção de presença
+POST http://localhost:8080/intencoes
+Content-Type: application/json
+
+{
+  
+  "cpf": "98765432100",
+  "dataHora": "2025-09-10T11:30:00"
+
+
+}
+
+
+
+### Listar todas as intenções
+GET http://localhost:8080/intencoes
+
+### Buscar intenção por ID
+GET http://localhost:8080/intencoes/1
+
+### Confirmar presença (apenas administrador)
+PUT http://localhost:8080/intencoes/1/confirmar
+
+### Deletar intenção
+DELETE http://localhost:8080/intencoes/1
+
+### Criar uma presença
+POST http://localhost:8080/presencas
+Content-Type: application/json
+
+{
+  "cpf": "12345678900",
+  "status": "PRESENTE",
+  "dataHora": "2025-09-10T10:30:00"
+}
+
+### Listar todas as presenças
+GET http://localhost:8080/presencas
+
+
+### Obter lotação em tempo real
+GET http://localhost:8080/presencas/lotacao-tempo-real
