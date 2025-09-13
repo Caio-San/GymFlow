@@ -1,12 +1,19 @@
 package com.Projeto.GymFlow.dto;
 
-import java.time.LocalDateTime;
+
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
+
 
 
 public class PresencaCadastroDTO {
-    private String cpf; // apenas o CPF do aluno
+    @NotBlank(message = "O CPF nao pode estar em branco")
+    @Pattern(regexp = "\\d{11}", message = "O CPF deve conter 11 digitos numericos")
+    private String cpf; // apenas o CPF do 
+    
+    @NotBlank(message = "O status nao pode estar em branco")
     private String status;
-    private LocalDateTime dataHora;
+
 
     public String getCpf() {
         return cpf;
@@ -24,12 +31,5 @@ public class PresencaCadastroDTO {
         this.status = status;
     }
 
-    public LocalDateTime getDataHora() {
-        return dataHora;
-    }
-
-    public void setDataHora(LocalDateTime dataHora) {
-        this.dataHora = dataHora;
-    }
 }
 

@@ -34,7 +34,8 @@ public class PresencaService {
         Presenca presenca = new Presenca();
         presenca.setAluno(aluno);
         presenca.setStatus(dto.getStatus() != null ? dto.getStatus() : "PRESENTE");
-        presenca.setDataHora(dto.getDataHora() != null ? dto.getDataHora() : LocalDateTime.now());
+        //a data deve sempre ser a atual
+        presenca.setDataHora(LocalDateTime.now());
 
         Presenca presencaSalva = presencaRepository.save(presenca);
 

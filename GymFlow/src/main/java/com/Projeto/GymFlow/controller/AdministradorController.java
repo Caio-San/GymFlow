@@ -3,6 +3,10 @@ package com.Projeto.GymFlow.controller;
 
 
 import com.Projeto.GymFlow.service.AdministradorService;
+
+import jakarta.validation.Valid;
+
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import com.Projeto.GymFlow.dto.AdministradorCadastroDTO;
 import com.Projeto.GymFlow.dto.AdministradorRespostaDTO;
@@ -18,9 +22,10 @@ public class AdministradorController {
     }
 
     @PostMapping
-    public AdministradorRespostaDTO cadastrar(@RequestBody AdministradorCadastroDTO dto) {
-        return service.cadastrarAdministrador(dto);
+    public ResponseEntity<AdministradorRespostaDTO> cadastrarAdministrador(@RequestBody @Valid AdministradorCadastroDTO administradorDto) {
+        return ResponseEntity.ok(service.cadastrarAdministrador(administradorDto));
     }
+
 
     @GetMapping
     public java.util.List<AdministradorRespostaDTO> listar() {

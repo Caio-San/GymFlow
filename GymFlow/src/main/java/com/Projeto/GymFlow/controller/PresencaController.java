@@ -3,6 +3,9 @@ package com.Projeto.GymFlow.controller;
 import com.Projeto.GymFlow.dto.PresencaCadastroDTO;
 import com.Projeto.GymFlow.dto.PresencaRespostaDTO;
 import com.Projeto.GymFlow.service.PresencaService;
+
+import jakarta.validation.Valid;
+
 import com.Projeto.GymFlow.dto.LotacaoRespostaDTO;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -21,8 +24,8 @@ public class PresencaController {
 
     // cadastrar presença
     @PostMapping
-    public PresencaRespostaDTO cadastrar(@RequestBody PresencaCadastroDTO dto) {
-        return presencaService.cadastrarPresenca(dto);
+    public ResponseEntity<PresencaRespostaDTO> registrarPresenca(@RequestBody @Valid PresencaCadastroDTO presencaDto) {
+        return ResponseEntity.ok(presencaService.cadastrarPresenca(presencaDto));
     }
 
     // listar todas presenças

@@ -10,14 +10,9 @@ public class Presenca {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToOne
-    @JoinColumn(name = "intencao_id", nullable = false)
+    @ManyToOne
+    @JoinColumn(name = "aluno_id", nullable = false)
     private Aluno aluno;
-    // relação com aluno (uma presença está associada a um aluno)
-    //oq signfica as assinaturas acima?
-    //OneToOne significa que cada presença está associada a um único aluno
-    //JoinColumn especifica a coluna na tabela de presença que referencia a tabela de aluno
-    //nullable = false indica que essa coluna não pode ser nula, ou seja, toda presença deve estar associada a um aluno
 
 
     private String status; // status da presença (confirmada, cancelada, etc.)

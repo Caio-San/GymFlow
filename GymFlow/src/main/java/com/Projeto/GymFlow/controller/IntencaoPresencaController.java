@@ -3,6 +3,10 @@ package com.Projeto.GymFlow.controller;
 import com.Projeto.GymFlow.dto.IntencaoPresencaCadastroDTO;
 import com.Projeto.GymFlow.dto.IntencaoPresencaRespostaDTO;
 import com.Projeto.GymFlow.service.IntencaoPresencaService;
+
+import jakarta.validation.Valid;
+
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -23,8 +27,8 @@ public class IntencaoPresencaController {
     //oque eu escrevi acima esta certo?
     //
     @PostMapping
-    public IntencaoPresencaRespostaDTO cadastrar(@RequestBody IntencaoPresencaCadastroDTO dto) {
-        return service.cadastrar(dto);
+    public ResponseEntity<IntencaoPresencaRespostaDTO> registrarIntencao(@RequestBody @Valid IntencaoPresencaCadastroDTO intencaoDto) {
+        return ResponseEntity.ok(service.cadastrar(intencaoDto));
     }
 
     @GetMapping
