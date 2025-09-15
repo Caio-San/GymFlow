@@ -57,8 +57,6 @@ A API foi desenvolvida seguindo o padrão RESTful. A seguir, uma lista dos princ
 
 #### Exemplo de Requisições
 
-Use blocos de código para mostrar exemplos de requisições e respostas (você pode simplificar as respostas para não encher o `README`).
-
 ```markdown
 **Cadastrar um Aluno (POST)**
 
@@ -70,7 +68,7 @@ Use blocos de código para mostrar exemplos de requisições e respostas (você 
       "cpf": "12345678900",
       "nome": "Caio Santana"
     }
-    ```
+```
 
 ### Próximos Passos e Melhorias Futuras
 
