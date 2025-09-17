@@ -12,7 +12,6 @@ Este projeto de backend, desenvolvido em Java e Spring Boot, tem como objetivo p
 * **Gerenciador de Dependências:** [Maven](https://maven.apache.org/)
 * **Banco de Dados:** [H2 Database](https://www.h2database.com/html/main.html) (para testes e desenvolvimento)
 * **Validação:** [Spring Validation](https://docs.spring.io/spring-framework/reference/core/validation/overview.html)
-* **IDE:** [Visual Studio Code](https://code.visualstudio.com/) ou [IntelliJ IDEA](https://www.jetbrains.com/idea/)
 
 
 
