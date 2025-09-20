@@ -69,10 +69,3 @@ A API foi desenvolvida seguindo o padrão RESTful. A seguir, uma lista dos princ
     }
 ```
 
-### Próximos Passos e Melhorias Futuras
-
-O projeto ainda pode evoluir para se tornar uma solução completa. Algumas ideias de melhoria incluem:
-
-* **Testes Automatizados:** Implementar testes de unidade e integração para garantir a estabilidade do sistema.
-* **Segurança:** Adicionar autenticação e autorização com Spring Security.
-* **Novas Funcionalidades:** Desenvolver um módulo para gerenciamento de aulas e planos de treino, relatorios de aluno e presenças , recomendação de horário para alunos e otimização da lotação.
