@@ -31,7 +31,6 @@ Este projeto de backend, desenvolvido em Java e Spring Boot, tem como objetivo p
     ```bash
     mvn spring-boot:run
     ```
-    A aplicação estará disponível em `http://localhost:8080`.
 
 
 
